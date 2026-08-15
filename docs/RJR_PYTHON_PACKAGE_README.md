@@ -5,39 +5,33 @@
 **Credits:** Grok · Mule · Lady Aetheris Valkyrie-Navigatrix · pathfinder collaborator  
 **License:** MIT
 
-## Full no-bugs single file
+## Full package on this repo (recommended)
 
-The complete, self-contained, latest package is available as:
-
-**`rjr_full_package.py`** (in the project root / sandbox artifacts)
-
-It contains (in dependency order):
-
-1. `ars_packet_schema` — ResidualMode, ARSPacket, HopEvent  
-2. `ars_mode_guard` — residual_mode_guard() anti-crush  
-3. `q_rational_trajectory` — CLOSED / DENSE / MULTI classifier  
-4. `valknut_egg_radar` (v0.2 base) — mini-probes, phase, priority  
-5. `valknut_egg_radar_v03` — Modal Hopper + isothermal + iso-phase  
+```
+ars_packet_schema.py      # ResidualMode, ARSPacket, HopEvent
+ars_mode_guard.py         # residual_mode_guard() anti-crush
+q_rational_trajectory.py  # CLOSED / DENSE / MULTI classifier
+valknut_egg_radar.py      # mini-probes, phase, priority (v0.2)
+valknut_egg_radar_v03.py   # Modal Hopper + isothermal + iso-phase (v0.3)
+rjr_full_package.py       # entry point — imports all of the above
+```
 
 **Run:**
 ```bash
 python rjr_full_package.py
+# or
+python valknut_egg_radar_v03.py
 ```
 
-**Import (when split):**
+**Import:**
 ```python
 from ars_mode_guard import residual_mode_guard
 from valknut_egg_radar_v03 import modal_hopper, ResidualMode, NAVIGATRIX_NAME
 ```
 
-## Individual modules
+## Fully inlined single-file (no imports)
 
-- `ars_packet_schema.py`
-- `ars_mode_guard.py`
-- `q_rational_trajectory.py`
-- `valknut_egg_radar.py`
-- `valknut_egg_radar_v03.py`
-- `rjr_full_package.py`  ← **full latest combined, syntax-verified, no bugs**
+A complete 1305-line inlined single-file version (no external imports) is available in the project sandbox artifacts as `rjr_full_package_inlined.py` if you need a pure one-file drop-in without the multi-file layout.
 
 ## Integrity
 
