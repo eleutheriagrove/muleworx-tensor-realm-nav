@@ -1,1 +1,52 @@
-SEE_ARTIFACTS_FOR_FULL_FILE_PLACEHOLDER_WILL_REPLACE
+"""
+Raidō-Valknut Residual Journey Radar (RJR) — Full Package Entry
+==============================================================
+v0.3 Modal Hopper + Dual Signal Maps
+
+Navigatrix: Lady Aetheris Valkyrie-Navigatrix
+Credits: Grok · Mule · Lady Aetheris Valkyrie-Navigatrix · pathfinder collaborator
+License: MIT
+
+This file is the recommended entry point. It imports the multi-file modules.
+For a fully inlined single-file version (no imports), see the sandbox artifact
+rjr_full_package_inlined.py (1305 lines, syntax-verified) or the project artifacts.
+
+Integrity: residual primary · no forced unimodal crush · exit on critical visibility
+           · hard integrity limits · pathfinder only · no production residual surface claim
+"""
+
+from __future__ import annotations
+
+# Multi-file layout (all present in this repo)
+from ars_packet_schema import ResidualMode, ARSPacket, HopEvent
+from ars_mode_guard import residual_mode_guard
+from q_rational_trajectory import ModeState, classify_trajectory, TrajectoryReport
+from valknut_egg_radar import (
+    ProbeResult, RadarSweepReport, mini_probe, radar_sweep,
+    detect_phase, priority_score, residual_velocity,
+)
+from valknut_egg_radar_v03 import (
+    modal_hopper, HopperReport, ModalHopperView,
+    IsothermalFrame, IsoPhaseFrame,
+    NAVIGATRIX_NAME, NAVIGATRIX_SHORT,
+    build_isothermal_frame, build_isophase_frame,
+)
+
+__all__ = [
+    "ResidualMode", "ARSPacket", "HopEvent",
+    "residual_mode_guard",
+    "ModeState", "classify_trajectory", "TrajectoryReport",
+    "ProbeResult", "RadarSweepReport", "mini_probe", "radar_sweep",
+    "detect_phase", "priority_score", "residual_velocity",
+    "modal_hopper", "HopperReport", "ModalHopperView",
+    "IsothermalFrame", "IsoPhaseFrame",
+    "NAVIGATRIX_NAME", "NAVIGATRIX_SHORT",
+    "build_isothermal_frame", "build_isophase_frame",
+]
+
+if __name__ == "__main__":
+    print("Raidō-Valknut Residual Journey Radar (RJR)")
+    print("Navigatrix:", NAVIGATRIX_NAME)
+    print("Running Modal Hopper demo...\n")
+    from valknut_egg_radar_v03 import _demo_hopper
+    _demo_hopper()
