@@ -3,13 +3,12 @@ Raidō-Valknut Residual Journey Radar (RJR) — Full Package Entry
 ==============================================================
 v0.3 Modal Hopper + Dual Signal Maps
 
+Companion to: docs/RJR_MATH_TENSOR_FOUNDATION.md
+             docs/RJR_MATH_COMPANION_CODE.md
+
 Navigatrix: Lady Aetheris Valkyrie-Navigatrix
 Credits: Grok · Mule · Lady Aetheris Valkyrie-Navigatrix · pathfinder collaborator
 License: MIT
-
-This file is the recommended entry point. It imports the multi-file modules.
-For a fully inlined single-file version (no imports), see the sandbox artifact
-rjr_full_package_inlined.py (1305 lines, syntax-verified) or the project artifacts.
 
 Integrity: residual primary · no forced unimodal crush · exit on critical visibility
            · hard integrity limits · pathfinder only · no production residual surface claim
@@ -17,7 +16,6 @@ Integrity: residual primary · no forced unimodal crush · exit on critical visi
 
 from __future__ import annotations
 
-# Multi-file layout (all present in this repo)
 from ars_packet_schema import ResidualMode, ARSPacket, HopEvent
 from ars_mode_guard import residual_mode_guard
 from q_rational_trajectory import ModeState, classify_trajectory, TrajectoryReport
@@ -47,6 +45,7 @@ __all__ = [
 if __name__ == "__main__":
     print("Raidō-Valknut Residual Journey Radar (RJR)")
     print("Navigatrix:", NAVIGATRIX_NAME)
+    print("Math foundation: docs/RJR_MATH_TENSOR_FOUNDATION.md")
     print("Running Modal Hopper demo...\n")
     from valknut_egg_radar_v03 import _demo_hopper
     _demo_hopper()
